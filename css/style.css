@@ -1,0 +1,271 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    height: 100px;
+    width:100% ;
+    background-color: black;
+}
+nav .container{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+nav  a{
+    text-decoration: none;
+    color: white;
+    padding: 35px 10px;
+    width: 120px;
+    display: block;
+    text-align: center;
+}
+nav a:hover{
+    background-color: rgb(39, 39, 39);
+}
+/*header*/
+header{
+    height: 500px;
+    width: 100%;
+    background-color: black;
+}
+header .container{
+    height: 75%;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+header h1{
+    color: white;
+    font-size: 80px;
+}
+header h2{
+    color: white;
+}
+/* Add these styles to the existing CSS file */
+
+header h2 {
+    position: relative;
+    display: inline-block;
+    color: transparent; /* Make the text transparent initially */
+    font-size: 25px;
+}
+
+header h2::before {
+    content: attr(data-text); /* Use the data-text attribute for the text content */
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: white; /* Color the text */
+    border-right: 2px solid white; /* Create a cursor effect */
+    animation: typing 3s 5s steps(40, end) infinite , blink 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
+/*skills*/
+.skills{
+    height: auto;
+    background-color: black;
+    color: white;
+}
+.skills .container{
+    height: 90%;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+.skills h2{
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+.skills .skcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.skills .box{
+    width: 125px;
+    height: 200px;
+    display: flex;
+    padding: 30px 10px;
+    margin: 20px 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid white 2px;
+    border-radius: 25px;
+
+}
+.skills .box:hover{
+    background-color: rgb(39, 39, 39);
+}
+.skills i{
+    font-size: 70px;
+    margin-bottom: 40px;
+}
+.skills h3{
+    font-size: 20px;
+    text-wrap: nowrap;
+}
+/*projects*/
+.projects{
+    padding-top: 100px;
+    height: auto;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.projects .container{
+    margin: auto;
+    width: 85%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.projects h2{
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+.projects .project{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.project h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.projects p{
+    margin-bottom: 10px;
+}
+.projects img{
+    width: 200px;
+    height: 150px;
+    margin: auto;
+    border-radius: 5px;
+}
+.projects button{
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    border: solid white 2px;
+    margin-bottom: 10px;
+}
+.projects button:hover{
+    background-color: rgb(53, 53, 53);
+    cursor: pointer;
+}
+/*footer*/
+footer{
+    height: auto;
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+footer .container{
+    width: 85%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer .com{
+    margin-bottom: 20px;
+}
+footer h2{
+    margin-bottom: 7px;
+}
+footer h5{
+    margin-bottom: 3px;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}
+hr{
+    padding-top: 10px;
+}
+/*desktop design*/
+@media  screen and (min-width: 480px) {
+    header{
+        height: 600px;
+    }
+    header h1{
+        font-size: 150px;
+    }
+    header h2{
+        font-size: 35px;
+    }   
+    .skills .box{
+        width: 200px;
+        height: 300px;
+    }
+    .skills h2{
+        font-size: 60px;
+    }
+    .skills h3{
+        font-size: 30px;
+    }
+    .skills i{
+        font-size: 130px;
+    }
+    /*projects*/
+    .projects .project{
+        flex-direction: row;
+        height: 150px;
+    }
+    .projects p{
+        width: 80%;
+        font-size: large;
+    }
+    .projects img{
+        height: 125px;
+        width: 170px;
+        margin: 0;
+    }
+    /*footer*/
+    footer .container{
+        flex-direction: row;
+    }
+    footer .nav{
+        margin-right: 50px;
+    }
+}
