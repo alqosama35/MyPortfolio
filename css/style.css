@@ -259,11 +259,21 @@ footer h5{
 footer a{
     text-decoration: none;
     color: white;
+    margin-top: 10px;
+    margin-left: 9px;
     
 }
 hr{
     padding-top: 10px;
     background-color: white;
+}
+footer i{
+    font-size: 30px;
+    margin-top: 10px;
+    
+}
+footer a:hover{
+    color: -webkit-link;
 }
 /*desktop design*/
 @media  screen and (min-width: 480px) {
