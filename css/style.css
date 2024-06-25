@@ -97,27 +97,20 @@ header h2::before {
     overflow: hidden;
     color: white; /* Color the text */
     border-right: 2px solid white; /* Create a cursor effect */
-    animation: typing 3s 5s steps(40, end) infinite , blink 0.75s step-end infinite;
+    animation: typing 4s steps(40, end) infinite, blink 0.75s step-end infinite;
 }
 
 /* Typing animation */
 @keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 100%; }
 }
 
 /* Blinking cursor animation */
 @keyframes blink {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: white;
-    }
+    0%, 100% { border-color: white; }
+    50% { border-color: transparent; }
 }
 /*skills*/
 .skills{
@@ -170,6 +163,10 @@ header h2::before {
 .skills h3{
     font-size: 20px;
     text-wrap: nowrap;
+}
+.skills img{
+    width: 150px;
+    margin-bottom: 20px;
 }
 /*projects*/
 .projects{
@@ -228,6 +225,10 @@ header h2::before {
     background-color: rgb(53, 53, 53);
     box-shadow: 0px 0px 12px 5px rgb(255, 255, 255);
     cursor: pointer;
+}
+.projects hr{
+    padding: 0;
+    margin: 7px 0;
 }
 /*footer*/
 footer{
