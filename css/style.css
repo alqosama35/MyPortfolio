@@ -1,13 +1,39 @@
+:root{
+    --bck: rgba(0, 0, 0, 0.5);
+    --text: white;
+}
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+body {
+    margin: 0;
+    padding: 0;
+    /* Prevent scrollbars if necessary */
+    position: relative;
+    height: 200vh; /* Added height to show scrolling effect */
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Fixed position to stay in place while scrolling */
+    top: 50%;
+    left: 50%;
+    width: 150vh; /* Ensure it covers the entire viewport */
+    height: 150vw; /* Ensure it covers the entire viewport */
+    background-image: url('../img/solid.jpg');
+    background-size: cover; /* Or use 'contain' based on your preference */
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%) rotate(90deg); /* Adjust the angle as needed */
+    z-index: -1; /* Ensure it stays behind the content */
+}
 nav{
     height: 100px;
     width:100% ;
-    background-color: black;
+    background-color: var(--bck);
 }
 nav .container{
     padding: 0 20px;
@@ -28,12 +54,15 @@ nav  a{
 }
 nav a:hover{
     background-color: rgb(39, 39, 39);
+    border-radius: 10px;
 }
 /*header*/
 header{
     height: 500px;
     width: 100%;
-    background-color: black;
+    background-color: var(--bck);
+    
+    
 }
 header .container{
     height: 75%;
@@ -93,8 +122,10 @@ header h2::before {
 /*skills*/
 .skills{
     height: auto;
-    background-color: black;
+    background-color: var(--bck);
     color: white;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 .skills .container{
     height: 90%;
@@ -125,10 +156,12 @@ header h2::before {
     flex-direction: column;
     border: solid white 2px;
     border-radius: 25px;
+    box-shadow: 0px 0px 7px 3px rgb(255, 255, 255);
 
 }
 .skills .box:hover{
     background-color: rgb(39, 39, 39);
+    box-shadow: 0px 0px 12px 5px rgb(255, 255, 255);
 }
 .skills i{
     font-size: 70px;
@@ -143,8 +176,10 @@ header h2::before {
     padding-top: 100px;
     height: auto;
     width: 100%;
-    background-color: black;
+    background-color: var(--bck);
     color: white;
+    padding-bottom: 40px;
+    
 }
 .projects .container{
     margin: auto;
@@ -152,6 +187,7 @@ header h2::before {
     height: 90%;
     display: flex;
     flex-direction: column;
+    
 }
 .projects h2{
     margin-bottom: 30px;
@@ -184,16 +220,19 @@ header h2::before {
     color: white;
     font-size: 20px;
     border: solid white 2px;
+    border-radius: 20px;
     margin-bottom: 10px;
+    box-shadow: 0px 0px 7px 3px rgb(255, 255, 255);
 }
 .projects button:hover{
     background-color: rgb(53, 53, 53);
+    box-shadow: 0px 0px 12px 5px rgb(255, 255, 255);
     cursor: pointer;
 }
 /*footer*/
 footer{
     height: auto;
-    background-color: black;
+    background-color: var(--bck);
     color: white;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -213,15 +252,17 @@ footer h2{
     margin-bottom: 7px;
 }
 footer h5{
-    margin-bottom: 3px;
+    margin-bottom: 5px;
+    font-size: 15px;
 }
 footer a{
     text-decoration: none;
     color: white;
-    font-size: larger;
+    
 }
 hr{
     padding-top: 10px;
+    background-color: white;
 }
 /*desktop design*/
 @media  screen and (min-width: 480px) {
