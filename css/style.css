@@ -1,21 +1,22 @@
-:root{
-    --bck: rgba(0, 0, 0, 0.5);
-    --text: white;
-}
-*{
+:root {
+    --main-color: #1f1f1f;
+    --accent: #007bff;
+    --text: #fff;
+    --background: #121212;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-body {
-    margin: 0;
-    padding: 0;
-    /* Prevent scrollbars if necessary */
-    position: relative;
-    height: 200vh; /* Added height to show scrolling effect */
-}
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+  }
 body::before {
     content: "";
     position: fixed; /* Fixed position to stay in place while scrolling */
@@ -29,316 +30,222 @@ body::before {
     background-position: center;
     transform: translate(-50%, -50%) rotate(90deg); /* Adjust the angle as needed */
     z-index: -1; /* Ensure it stays behind the content */
+    filter: brightness(50%); /* Makes the image darker */
 }
-nav{
-    height: 100px;
-    width:100% ;
-    background-color: var(--bck);
-}
-nav .container{
-    padding: 0 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    
-}
-nav  a{
-    text-decoration: none;
-    color: white;
-    padding: 35px 10px;
-    width: 120px;
-    display: block;
-    text-align: center;
-}
-nav a:hover{
-    background-color: rgb(39, 39, 39);
-    border-radius: 10px;
-}
-/*header*/
-header{
-    height: 500px;
-    width: 100%;
-    background-color: var(--bck);
-    
-    
-}
-header .container{
-    height: 75%;
-    margin: auto auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-header h1{
-    color: white;
-    font-size: 80px;
-}
-header h2{
-    color: white;
-}
-/* Add these styles to the existing CSS file */
-
-header h2 {
-    position: relative;
-    display: inline-block;
-    color: transparent; /* Make the text transparent initially */
-    font-size: 25px;
-}
-
-header h2::before {
-    content: attr(data-text); /* Use the data-text attribute for the text content */
-    position: absolute;
-    top: 0;
-    left: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    color: white; /* Color the text */
-    border-right: 2px solid white; /* Create a cursor effect */
-    animation: typing 4s steps(40, end) infinite, blink 0.75s step-end infinite;
-}
-
-/* Typing animation */
-@keyframes typing {
-    0% { width: 0; }
-    50% { width: 100%; }
-    100% { width: 100%; }
-}
-
-/* Blinking cursor animation */
-@keyframes blink {
-    0%, 100% { border-color: white; }
-    50% { border-color: transparent; }
-}
-/*skills*/
-.skills{
-    height: auto;
-    background-color: var(--bck);
-    color: white;
-    padding-bottom: 100px;
-    padding-top: 40px;
-}
-.skills .container{
-    height: 90%;
-    width: 85%;
+  .container {
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
+    padding: 20px 0;
+  }
+  
+  nav {
+    background: rgba(0, 0, 0, 0.205);
+    padding: 2px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .nav-container {
     display: flex;
-    flex-direction: column;
-    
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-links a {
+    color: var(--text);
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+.nav-links a:hover {
+    color: var(--accent);
+    text-decoration: underline;
 }
-.skills h2{
-    margin-bottom: 30px;
-    font-size: 50px;
+  
+  header {
+    text-align: center;
+    padding: 80px 0;
+  }
+  
+  .header-container h1 {
+    font-size: 3rem;
+  }
+  
+.header-container h2 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--accent);
+    animation: typing 6s steps(30, end) infinite, blink 1s step-end infinite;
+    display: inline-block; /* Ensures it stays inline and doesn't move */
+    max-width: 13ch; /* Restricts the width to prevent excessive movement */
+    text-align: left; /* Ensures proper alignment */
 }
-.skills .skcontainer{
+
+@-webkit-keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--accent);
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--accent);
+    }
+}
+  .header-container p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .skills h2,
+  .projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .skill {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.3s;
+  }
+  
+  .skill:hover {
+    transform: translateY(-5px);
+  }
+  
+  .skill i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+    color: var(--accent);
+  }
+  
+  .projects .project {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    
-}
-.skills .box{
-    width: 125px;
-    height: 200px;
-    display: flex;
-    padding: 30px 10px;
-    margin: 20px 10px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border: solid white 2px;
-    border-radius: 25px;
-    box-shadow: 0px 0px 7px 3px rgb(255, 255, 255);
-}
-.skills .box:hover{
-    background-color: rgb(39, 39, 39);
-    box-shadow: 0px 0px 12px 5px rgb(255, 255, 255);
-}
-.skills i{
-    font-size: 70px;
-    margin-bottom: 40px;
-}
-.skills h3{
-    font-size: 20px;
-    text-wrap: wrap;
-    text-align: center;
-}
-.skills img{
-    width: 150px;
+    gap: 20px;
+    background: #1e1e1e;
     margin-bottom: 20px;
-}
-/*projects*/
-.projects{
-    padding-top: 100px;
-    height: auto;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .project img {
     width: 100%;
-    background-color: var(--bck);
-    color: white;
-    padding-bottom: 40px;
-    
-}
-.projects .container{
-    margin: auto;
-    width: 85%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    
-}
-.projects h2{
-    margin-bottom: 30px;
-    font-size: 50px;
-}
-.projects .project{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    max-width: 300px;
+    border-radius: 10px;
+  }
+  
+  .project-info {
+    flex: 1;
+  }
+  
+  .project-info h3 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
-}
-.project h3{
-    font-size: 25px;
+  }
+  
+  .project-info p {
     margin-bottom: 10px;
-    text-align: center;
-}
-.projects p{
-    margin: auto;
-    margin-bottom: 10px;
-    text-align: center;
-}
-.projects ul {
-    font-size: 15px;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 10px;
-}
-.projects img{
-    width: 300px;
-    height: 200px;
-    margin: auto;
-    border-radius: 5px;
-}
-.projects a{
-    margin: auto;
-    width: 100%;
-}
-.projects button{
-    width: 100%;
-    height: 40px;
-    margin: 30px 0;
-    background-color: transparent;
-    color: white;
-    font-size: 20px;
-    border: solid white 2px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    box-shadow: 0px 0px 7px 3px rgb(255, 255, 255);
-}
-.projects button:hover{
-    background-color: rgb(53, 53, 53);
-    box-shadow: 0px 0px 12px 5px rgb(255, 255, 255);
-    cursor: pointer;
-}
-.projects hr{
-    padding: 0;
-    margin: 30px 0;
-}
-/*footer*/
-footer{
-    height: auto;
-    background-color: var(--bck);
-    color: white;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-footer .container{
-    width: 85%;
-    height: 90%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-footer .com{
-    margin-bottom: 20px;
-}
-footer h2{
-    margin-bottom: 7px;
-}
-footer h5{
-    margin-bottom: 5px;
-    font-size: 15px;
-}
-footer a{
-    text-decoration: none;
-    color: white;
-    margin-top: 10px;
-    margin-left: 9px;
-    
-}
-hr{
-    padding-top: 10px;
-    background-color: white;
-}
-footer i{
-    font-size: 30px;
-    margin-top: 10px;
-    
-}
-footer a:hover{
-    color: -webkit-link;
-}
-/*desktop design*/
-@media  screen and (min-width: 480px) {
-    header{
-        height: 600px;
-    }
-    header h1{
-        font-size: 150px;
-    }
-    header h2{
-        font-size: 35px;
-    }   
-    .skills .box{
-        width: 200px;
-        height: 300px;
-    }
-    .skills h2{
-        font-size: 60px;
-    }
-    .skills h3{
-        font-size: 30px;
-    }
-    .skills i{
-        font-size: 130px;
-    }
-    /*projects*/
-    .projects .container{
-        width: 80%;
-    }
-    .projects .project{
+  }
+  
+  .project .links a {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: var(--accent);
+  }
 
-    }
-    .projects p{
-        width: 80%;
-        font-size: 20px;
-    }
-    .projects img{
-        height: 40vw;
-        width: 80%;
-    }
-    .projects h3{
-        font-size: 28px;
-    }
-    /*footer*/
-    footer .container{
-        flex-direction: row;
-    }
-    footer .nav{
-        margin-right: 50px;
-    }
-    footer h5{
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-}
+  .project a{
+    font-size: 1.2rem;
+  }
+  
+  .see-more {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--accent);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  footer {
+    background: var(--main-color);
+    padding: 40px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  footer a{
+    color: #007bff;
+  }
+  
+  .contact-info p,
+  .socials a {
+    margin-top: 10px;
+  }
+  
+  .socials a {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-right: 15px;
+  }
+  

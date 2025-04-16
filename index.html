@@ -3,181 +3,156 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Osama Abdullah | Web Developer</title>
     <link rel="stylesheet" href="css/style.css" />
     <script
       src="https://kit.fontawesome.com/b4a82c2c2a.js"
       crossorigin="anonymous"
     ></script>
-    <title>Osama Abdullah</title>
   </head>
   <body>
     <nav>
-      <div class="container">
-        <a href="index.html" class="left"><h1>Home</h1></a>
-        <a href="#projects" class="right"><h1>Projects</h1></a>
+      <div class="container nav-container">
+        <a href="#home" class="logo">Osama</a>
+        <div class="nav-links">
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
     </nav>
-    <header>
-      <div class="container">
-        <h1>OSAMA</h1>
-        <h2 data-text="Web Developer">Web Developer</h2>
+
+    <header id="home">
+      <div class="container header-container">
+        <h1>Osama Abdullah</h1>
+        <h2>Web Developer</h2>
+        <p>I build user-friendly and scalable web applications.</p>
       </div>
     </header>
-    <div class="skills" id="skills">
+
+    <section class="skills" id="skills">
       <div class="container">
         <h2>Skills</h2>
-        <div class="skcontainer">
-          <div class="box">
-            <i class="fa-brands fa-html5"></i>
-            <h3>HTML</h3>
-          </div>
-          <div class="box">
-            <i class="fa-brands fa-css3-alt"></i>
-            <h3>CSS</h3>
-          </div>
-          <div class="box">
-            <i class="fa-brands fa-js"></i>
-            <h3>Java Script</h3>
-          </div>
-          <div class="box">
-            <i class="fa-brands fa-node-js"></i>
-            <h3>Node JS</h3>
-          </div>
-          <div class="box">
-            <i class="fa-brands fa-react"></i>
-            <h3>React</h3>
-          </div>
-          <div class="box">
-            <i class="fa-brands fa-js"></i>
-            <h3>Express JS</h3>
-          </div>
-          <div class="box">
-            <i class="fa-brands fa-git-alt"></i>
-            <h3>Git</h3>
-          </div>
-          <div class="box">
-            <i class="fa-brands fa-java"></i>
-            <h3>Java</h3>
-          </div>
-          <div class="box">
-            <i class="fa-brands fa-php"></i>
-            <h3>PHP</h3>
-          </div>
-          <div class="box">
-            <i class="fa-solid fa-database"></i>
-            <h3>SQL</h3>
-          </div>
-          <div class="box">
-            <i class="fa-solid fa-leaf"></i>
-            <h3>MongoDB</h3>
-          </div>
-          <div class="box">
-            <i class="fa-solid fa-lightbulb"></i>
-            <h3>Problem Solving</h3>
+        <div class="skills-grid">
+          <div class="skill"><i class="fa-brands fa-html5"></i>HTML</div>
+          <div class="skill"><i class="fa-brands fa-css3-alt"></i>CSS</div>
+          <div class="skill"><i class="fa-brands fa-js"></i>JavaScript</div>
+          <div class="skill"><i class="fa-brands fa-node-js"></i>Node.js</div>
+          <div class="skill"><i class="fa-brands fa-react"></i>React</div>
+          <div class="skill"><i class="fa-solid fa-code"></i>Express</div>
+          <div class="skill"><i class="fa-brands fa-git-alt"></i>Git</div>
+          <div class="skill"><i class="fa-brands fa-java"></i>Java</div>
+          <div class="skill"><i class="fa-brands fa-php"></i>PHP</div>
+          <div class="skill"><i class="fa-solid fa-database"></i>SQL</div>
+          <div class="skill"><i class="fa-solid fa-leaf"></i>MongoDB</div>
+          <div class="skill">
+            <i class="fa-solid fa-lightbulb"></i>Problem Solving
           </div>
         </div>
       </div>
-    </div>
-    <hr />
-    <div class="projects" id="projects">
+    </section>
+
+    <section class="projects" id="projects">
       <div class="container">
-      <h2>Projects</h2>
-      <div class="project">
-        <div class="descontainer">
-        <h3>
-          Jungo Hub
-          <a href="https://jungohub2.vercel.app/" target="_blank"
-          ><i class="fa-solid fa-eye"></i
-          ></a>
-          <a href="https://github.com/alqosama35/jungohub2" target="_blank"
-          ><i class="fa-brands fa-github"></i
-          ></a>
-        </h3>
-        <p>
-            Enabled 400+ students to access materials, track progress, and receive updates on exams, quizzes, and news,
-            enhancing academic engagement by 50%. Developed a role-based authentication system using JWT and bcrypt,
-            improving security and usability for Admins and Students. Optimized backend APIs, reducing average response
-            time by 40%.
-        </p>
+        <h2>Projects</h2>
+
+        <div class="project">
+          <img src="img/jungohub.png" alt="Jungo Hub Screenshot" />
+          <div class="project-info">
+            <h3>Jungo Hub</h3>
+            <p>
+              Access materials, track academic progress, and receive updates.
+              Built with secure authentication and optimized backend APIs.
+            </p>
+            <div class="links">
+              <a href="https://jungohub2.vercel.app/" target="_blank"
+                ><i class="fa-solid fa-eye"></i
+              ></a>
+              <a href="https://github.com/alqosama35/jungohub2" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
         </div>
-        <img src="img/jungohub.png" alt="screenshot">
-      </div>
-      
-      <hr>
-      <div class="project">
-        <div class="descontainer">
-        <h3>
-          Project Management System
-          <!-- <a target="_blank" href="https://alqosama35.github.io/jangohub/home.html"
-          ><i class="fa-solid fa-eye"></i
-          ></a> -->
-          <a target="_blank" href="https://github.com/alqosama35/ProjectManagementSystem"
-          ><i class="fa-brands fa-github"></i
+
+        <div class="project">
+          <h3>Project Management System</h3>
+          <p>
+            Streamlined project tracking for academic teams. Designed with
+            modular architecture and OOP.
+          </p>
+          <a
+            href="https://github.com/alqosama35/ProjectManagementSystem"
+            target="_blank"
+            ><i class="fa-brands fa-github"></i
           ></a>
-        </h3>
-        <p>
-            Streamlined academic workflows by designing and developing a project management system using OOP principles. Implemented four modules: Admin, Project Management, Team Leader, and Employee, which significantly improved project tracking efficiency. Led a team of six developers to successfully deliver the project on time.
-        </p>
         </div>
-        
-      </div>
-      <hr />
-      <div class="project">
-        <div class="descontainer">
-        <h3>
-          Book Review Application, Express App
-          <a href="https://github.com/alqosama35/expressBookReviews" target="_blank"
-          ><i class="fa-brands fa-github"></i
+
+        <div class="project">
+          <img src="img/book.png" alt="Book Review App Screenshot" />
+          <div class="project-info">
+            <h3>Book Review Application</h3>
+            <p>Full-stack app built with Express, HTML, and CSS.</p>
+            <a
+              href="https://github.com/alqosama35/expressBookReviews"
+              target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="project">
+          <h3>Budgeting Allocation Application</h3>
+          <p>
+            React-based application to manage and allocate budgets efficiently.
+          </p>
+          <a
+            href="https://github.com/alqosama35/ejtos-react_budget_app"
+            target="_blank"
+            ><i class="fa-brands fa-github"></i
           ></a>
-        </h3>
-        <p>HTML, CSS, JS, Expresss</p>
         </div>
-        <img src="img/book.png" alt="" />
-      </div>
-      <hr />
-      <div class="project">
-        <div class="descontainer">
-        <h3>
-          Budgeting Allocation Application, React App
-          <a href="https://github.com/alqosama35/ejtos-react_budget_app" target="_blank"
-          ><i class="fa-brands fa-github"></i
+
+        <div class="project">
+          <h3>Users Table DB (MERN)</h3>
+          <p>Full-stack CRUD system built with the MERN stack.</p>
+          <a href="https://github.com/alqosama35/Users-DB" target="_blank"
+            ><i class="fa-brands fa-github"></i
           ></a>
-        </h3>
-        <p>HTML, CSS, JS, React</p>
         </div>
+
+        <a
+          href="https://github.com/alqosama35?tab=repositories"
+          class="see-more"
+          target="_blank"
+          >See more on GitHub</a
+        >
       </div>
-      <hr />
-      <div class="project">
-        <div class="descontainer">
-        <h3>
-          Users Table DB, MERN<a
-          href="https://github.com/alqosama35/Users-DB" target="_blank"
-          ><i class="fa-brands fa-github"></i
-          ></a>
-        </h3>
-        <p>HTML, CSS, JS, React</p>
-        </div>
-      </div>
-      <a target="_blank" href="https://github.com/alqosama35?tab=repositories"><button>see more...</button></a>
-      </div>
-    </div>
-    <hr />
-    <footer>
-      <div class="container">
-        <div class="com">
+    </section>
+
+    <footer id="contact">
+      <div class="container footer-container">
+        <div class="contact-info">
           <h2>Contact Me</h2>
-          <h5>Email: osama.abdullah.2c@gmail.com</h5>
-          <h5>Telephone: 01027596668</h5>
-          <h5>Location: Egypt, Cairo</h5>
+          <p>
+            Email:
+            <a href="mailto:osama.abdullah.2c@gmail.com"
+              >osama.abdullah.2c@gmail.com</a
+            >
+          </p>
+          <p>Phone: <a href="tel:+201027596668">+20 1027596668</a></p>
+          <p>Location: Cairo, Egypt</p>
         </div>
-        <div class="links">
-          <h3>Links</h3>
-          <a href="https://www.linkedin.com/in/osama-abdalla-629394144/"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://github.com/alqosama35"><i class="fa-brands fa-github"></i></a>
-        </div>
-        <div class="nav">
-          <h2>Pages</h2>
-          <a href="index.html"><h5>Home</h5></a>
+        <div class="socials">
+          <h3>Social Links</h3>
+          <a
+            href="https://www.linkedin.com/in/osama-abdalla-629394144/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/alqosama35" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
         </div>
       </div>
     </footer>
