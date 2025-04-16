@@ -150,7 +150,6 @@ header h2::before {
     border: solid white 2px;
     border-radius: 25px;
     box-shadow: 0px 0px 7px 3px rgb(255, 255, 255);
-
 }
 .skills .box:hover{
     background-color: rgb(39, 39, 39);
@@ -162,7 +161,8 @@ header h2::before {
 }
 .skills h3{
     font-size: 20px;
-    text-wrap: nowrap;
+    text-wrap: wrap;
+    text-align: center;
 }
 .skills img{
     width: 150px;
@@ -199,8 +199,17 @@ header h2::before {
 .project h3{
     font-size: 25px;
     margin-bottom: 10px;
+    text-align: center;
 }
 .projects p{
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.projects ul {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
     margin-bottom: 10px;
 }
 .projects img{
